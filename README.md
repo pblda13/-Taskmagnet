@@ -1,11 +1,11 @@
-# Desafios de API Spring Boot para Nível Jr
+# Desafio de API Spring Boot para Nível Jr
 
 ## 1. API de Gerenciamento de Tarefas
 
 Esta é uma API RESTful desenvolvida para gerenciar tarefas. A API permite a criação, atualização, exclusão e busca de tarefas com base em diversos critérios. Utiliza o framework Spring Boot e Spring Data JPA para persistência de dados em um banco de dados.
 
 ## Diagrama
-```
+```mermaid
 graph TD;
     A(Criar Novas Tarefas) --> B(Buscar Tarefas);
     A --> C(Atualizar Tarefas);
@@ -20,20 +20,20 @@ graph TD;
     D --> L(Deletar por ID);
     D --> M(Deletar por Título);
     D --> N(Deletar por Status);
-    style A fill:#77DD77,stroke-width:2px;
-    style B fill:#77DD77,stroke-width:2px;
-    style C fill:#77DD77,stroke-width:2px;
-    style D fill:#77DD77,stroke-width:2px;
-    style E fill:#FFD700,stroke-width:2px;
-    style F fill:#FFD700,stroke-width:2px;
-    style G fill:#FFD700,stroke-width:2px;
-    style H fill:#FFD700,stroke-width:2px;
-    style I fill:#FFD700,stroke-width:2px;
-    style J fill:#FFD700,stroke-width:2px;
-    style K fill:#FFD700,stroke-width:2px;
-    style L fill:#FFD700,stroke-width:2px;
-    style M fill:#FFD700,stroke-width:2px;
-    style N fill:#FFD700,stroke-width:2px;
+    style A fill:#77DD77,stroke-width:2px, color:black;
+    style B fill:#77DD77,stroke-width:2px, color:black;
+    style C fill:#77DD77,stroke-width:2px, color:black;
+    style D fill:#77DD77,stroke-width:2px, color:black;
+    style E fill:#FFD700,stroke-width:2px, color:black;
+    style F fill:#FFD700,stroke-width:2px, color:black;
+    style G fill:#FFD700,stroke-width:2px, color:black;
+    style H fill:#FFD700,stroke-width:2px, color:black;
+    style I fill:#FFD700,stroke-width:2px, color:black;
+    style J fill:#FFD700,stroke-width:2px, color:black;
+    style K fill:#FFD700,stroke-width:2px, color:black;
+    style L fill:#FFD700,stroke-width:2px, color:black;
+    style M fill:#FFD700,stroke-width:2px, color:black;
+    style N fill:#FFD700,stroke-width:2px, color:black;
 ```
 ### Atributos das Tarefas
 
@@ -63,8 +63,3 @@ A documentação da API foi implementada utilizando Swagger/OpenAPI para facilit
 
 Este projeto foi desenvolvido como parte de um desafio para nível júnior em API Spring Boot. Esperamos que este README forneça uma visão geral clara do propósito e das funcionalidades da API de Gerenciamento de Tarefas. Se houver dúvidas ou sugestões, sinta-se à vontade para entrar em contato.
 
-**Autor:** [Seu Nome]
-
-**Data de Criação:** [Data]
-
-**Versão:** 1.0
