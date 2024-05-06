@@ -6,11 +6,11 @@ import java.util.Optional;
 
 public interface TaskService {
 
-    Task create(Task task);
-    Optional<Task> findById(Long id);
-    Task findByTitle(String title);
-    Task findByStatus(String status);
-    Task update(Long id,Task task);
-    void delete(Long id);
+        Task create(Task task);
+        Optional<Task> findById(Long id);
+        Optional<Task> findByTitle(String title);
+        Optional<Task> findByStatus(String status);
+        Task update(Long id, Task task);
+        void delete(Long id);
 
-}
+    }

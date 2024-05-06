@@ -26,31 +26,29 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Task findByTitle(String title) {
-        return taskRepository.findByTitle(title);
+    public Optional<Task> findByTitle(String title) {
+        return Optional.ofNullable(taskRepository.findByTitle(title));
     }
 
     @Override
-    public Task findByStatus(String status) {
-        return taskRepository.findByStatus(status);
+    public Optional<Task> findByStatus(String status) {
+        return Optional.ofNullable(taskRepository.findByStatus(status));
     }
 
     @Override
-    public Task update(Long id,Task task) {
-      Task existingTask = taskRepository.findById(id)
-              .orElseThrow(() -> new EntityNotFoundException("Task not found with id: " + id));
-      existingTask.setTitle(task.getTitle());
-      existingTask.setDescription(task.getDescription());
-      existingTask.setDeadline(task.getDeadline());
-      existingTask.setStatus(task.getStatus());
+    public Task update(Long id, Task task) {
+        Task existingTask = taskRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Task not found with id: " + id));
+        existingTask.setTitle(task.getTitle());
+        existingTask.setDescription(task.getDescription());
+        existingTask.setDeadline(task.getDeadline());
+        existingTask.setStatus(task.getStatus());
 
         return taskRepository.save(existingTask);
     }
 
     @Override
     public void delete(Long id) {
-        Task existingTask = taskRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Task not found with id: " + id));
         taskRepository.deleteById(id);
     }
 }

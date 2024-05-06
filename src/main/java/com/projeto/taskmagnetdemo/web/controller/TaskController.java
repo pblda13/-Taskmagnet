@@ -16,7 +16,6 @@ public class TaskController {
     @Autowired
     private TaskServiceImpl taskService;
 
-
     @PostMapping
     public ResponseEntity<Task> create(@RequestBody Task task) {
         try {
@@ -37,7 +36,7 @@ public class TaskController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Optional<Task>> findById(@PathVariable Long id) {
         try {
             Optional<Task> find = taskService.findById(id);
@@ -47,20 +46,20 @@ public class TaskController {
         }
     }
 
-    @GetMapping("/{title}")
-    public ResponseEntity<Task> findByTitle(@PathVariable String title) {
+    @GetMapping("/title/{title}")
+    public ResponseEntity<Optional<Task>> findByTitle(@PathVariable String title) {
         try {
-            Task find = taskService.findByTitle(title);
+            Optional<Task> find = taskService.findByTitle(title);
             return ResponseEntity.ok().body(find);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
     }
 
-    @GetMapping("/{status}")
-    public ResponseEntity<Task> findByStatus(@PathVariable String status) {
+    @GetMapping("/status/{status}")
+    public ResponseEntity<Optional<Task>> findByStatus(@PathVariable String status) {
         try {
-            Task find = taskService.findByStatus(status);
+            Optional<Task> find = taskService.findByStatus(status);
             return ResponseEntity.ok().body(find);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
